@@ -1,0 +1,32 @@
+﻿<Window x:Class="gestion_taxi.Reservation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gestion_taxi"
+        mc:Ignorable="d"
+        Title="reservation" Height="505" Width="865">
+    <Canvas Margin="0,0,701,0" Background="#FEFFF8E2">
+        <Label Content="Réservation Taxi" Canvas.Left="559" Canvas.Top="-1" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="24" Foreground="#FEFFF8E2"/>
+        <DataGrid x:Name="DataGrid1" Height="334" Width="497" Canvas.Left="296" Canvas.Top="25" SelectionChanged="DataGrid1_SelectionChanged"/>
+        <ComboBox x:Name="ClientList" Canvas.Left="40" Canvas.Top="60" Width="182" Text="Choisir un Client..." Height="27" SelectionChanged="ComboBox_SelectionChanged" FontWeight="Bold" FontSize="14" IsEditable="True" IsReadOnly="True">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <ComboBox x:Name="TaxiList" Canvas.Left="40" Canvas.Top="118" Width="182" Text="Choisir un Taxi Dispo..." Height="27" SelectionChanged="ComboBox_SelectionChanged" FontWeight="Bold" FontSize="14" IsEditable="True" IsReadOnly="True"/>
+        <TextBox x:Name="PrixText" Canvas.Left="40" Canvas.Top="167" Text="Prix" TextWrapping="Wrap" Width="182" Height="25" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" VerticalAlignment="Top" TextChanged="PrixText_TextChanged"/>
+        <TextBox x:Name="HeureText" Canvas.Left="40" Canvas.Top="269" Text="Heure:Minute" TextWrapping="Wrap" Width="182" Height="25" FontSize="14" FontWeight="Bold" TextChanged="PrixText_TextChanged"/>
+        <DatePicker x:Name="DateText" Canvas.Left="40" Canvas.Top="217" Height="24" Width="182"/>
+        <Button x:Name="AjouterBtn" Content="Ajouter" Canvas.Left="322" Canvas.Top="390" Height="35" Width="101" BorderBrush="White" Background="#FF0F0F0F" Foreground="White" FontSize="14" FontWeight="Bold" Click="AjouterBtn_Click"/>
+        <RadioButton x:Name="Complete" Content="Complète" Canvas.Left="160" Canvas.Top="344" Checked="RadioButton_Compl" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Incomplete" Content="Incomplète" Canvas.Left="160" Canvas.Top="365" Checked="RadioButton_Incompl"/>
+        <Label Content="Etat de réservation:" Canvas.Left="40" Canvas.Top="333"/>
+        <Button x:Name="RetourBtn" Content="&lt;Retour" Canvas.Left="10" Canvas.Top="6" Height="27" Width="63" BorderBrush="White" Background="#FF0F0F0F" Foreground="White" FontSize="14" FontWeight="Bold" Click="RetourBtn_Click"/>
+        <Button x:Name="ModifierBtn" Content="Modifier" Canvas.Left="494" Canvas.Top="390" Height="35" Width="101" BorderBrush="White" Background="#FF0F0F0F" Foreground="White" FontSize="14" FontWeight="Bold" Click="ModifierBtn_Click"/>
+        <Button x:Name="SupprimerBtn" Content="Supprimer" Canvas.Left="692" Canvas.Top="390" Height="35" Width="101" BorderBrush="White" Background="#FF0F0F0F" Foreground="White" FontSize="14" FontWeight="Bold" Click="SupprimerBtn_Click"/>
+    </Canvas>
+</Window>

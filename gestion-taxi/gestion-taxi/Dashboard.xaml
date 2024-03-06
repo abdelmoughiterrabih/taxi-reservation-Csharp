@@ -1,0 +1,29 @@
+﻿<Window x:Class="gestion_taxi.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gestion_taxi"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bg_image.jpeg"/>
+        </Grid.Background>
+        <Label Content="Gestion rendez-vous taxi" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Background="Yellow"/>
+        <Rectangle HorizontalAlignment="Left" Height="434" Stroke="Black" VerticalAlignment="Center" Width="100" Fill="Yellow"/>
+        <Button x:Name="rendez_vous" Content="gestion rendez-vous" HorizontalAlignment="Left" Height="73" Margin="138,131,0,0" VerticalAlignment="Top" Width="212" Background="Yellow" FontSize="18" FontWeight="Bold" Cursor="Hand" FontFamily="Arial Black" Click="rd_Click"/>
+        <Button x:Name="gestion_taxi" Content="gestion taxi" HorizontalAlignment="Left" Height="73" Margin="514,131,0,0" VerticalAlignment="Top" Width="212" Background="Yellow" FontSize="18" FontWeight="Bold" Cursor="Hand" FontFamily="Arial Black" Click="taxi_Click"/>
+        <Button x:Name="chauffeur" Content="gestion chauffeur" HorizontalAlignment="Left" Height="73" Margin="139,283,0,0" VerticalAlignment="Top" Width="211" Background="Yellow" FontSize="18" Cursor="Hand" FontWeight="Bold" FontFamily="Arial Black" Click="chauffeur_Click"/>
+        <Button x:Name="client" Content="gestion client" HorizontalAlignment="Left" Height="73" Margin="513,283,0,0" VerticalAlignment="Top" Width="215" Background="Yellow" FontSize="18" FontWeight="Bold" Cursor="Hand" RenderTransformOrigin="0.5,0.5" FontFamily="Arial Black" Click="client_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.585"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.74"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>
